@@ -86,7 +86,7 @@ export const KeycloakProvider = ({ children }) => {
 
   const initKeycloak = async (keycloakName, clientId, loginHint) => {
     const kc = new Keycloak({
-      url: "https://auth.myvciso.pro",
+      url: "your_server_url",
       realm: keycloakName,
       clientId,
     });
@@ -754,7 +754,7 @@ export default ProtectedRoute;
 
 2. **Keycloak Configuration**:
 
-   - Keycloak server URL: `https://auth.myvciso.pro`
+   - Keycloak server URL: `your_server_url`
    - Realm: Dynamic, fetched via API (`keycloakName`)
    - Redirect URI: `window.location.origin + '/auth/callback'`
    - Ensure the Keycloak server is configured with the correct client ID and redirect URI.
